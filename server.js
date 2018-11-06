@@ -6,10 +6,10 @@ const socketIO = require('socket.io');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, 'dist/socketioChat/')));
+app.use(express.static(path.join(__dirname, '/')));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/socketioChat/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 const server = http.createServer(app);
 
